@@ -7,18 +7,26 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #00060f;
             color: #ddd4d4;
             margin: 0;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            /* Configurando a imagem de fundo */
+            background-image: url('https://st3.depositphotos.com/2627021/15620/i/450/depositphotos_156205448-stock-photo-iceberg-hidden-danger-and-global.jpg');
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
         }
         .container {
             max-width: 900px;
             width: 100%;
             padding: 20px;
+            background-color: rgba(0, 6, 15, 0.8);
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
         h1 {
             text-align: center;
@@ -34,9 +42,10 @@
         }
         .level h2 {
             margin-top: 0;
-            border-bottom: 2px solid;
+            border-bottom: 2px solid #cfcdcd;
             padding-bottom: 10px;
             margin-bottom: 15px;
+            color: #cfcdcd;
         }
         .level ul {
             list-style-type: none;
@@ -46,29 +55,35 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 10px;
         }
-        .level li {
+
+        .level a {
             background-color: rgba(255, 255, 255, 0.05);
             padding: 8px 12px;
             border-radius: 5px;
             text-align: center;
             font-size: 0.9em;
+            color: inherit;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            display: block;
+            height: 100%;
+            box-sizing: border-box;
         }
 
-        /* Cores dos níveis do iceberg */
-        .level-1 { background-color: #4a90e2; }
-        .level-1 h2 { border-color: #cfcdcd; color: #cfcdcd; }
-        .level-2 { background-color: #2e64a8; }
-        .level-2 h2 { border-color: #cfcdcd; color: #cfcdcd; }
-        .level-3 { background-color: #1a4276; }
-        .level-3 h2 { border-color: #cfcdcd; color: #cfcdcd; }
-        .level-4 { background-color: #0e2e57; }
-        .level-4 h2 { border-color: #cfcdcd; color: #cfcdcd; }
-        .level-5 { background-color: #041730; }
-        .level-5 h2 { border-color: #cfcdcd; color: #cfcdcd; }
-        .level-6 { background-color: #010a16; }
-        .level-6 h2 { border-color: #cfcdcd; color: #cfcdcd; }
-        .level-deep { background-color: #01050c; color: #cfcdcd; }
-        .level-deep h2 { border-color: #cfcdcd; color: #cfcdcd; }
+        .level a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Cores dos níveis do iceberg (com luminosidade um pouco reduzida para o fundo escuro) */
+        .level-1 { background-color: #347bb7; }
+        .level-2 { background-color: #1e4a7b; }
+        .level-3 { background-color: #0d2e52; }
+        .level-4 { background-color: #061d35; }
+        .level-5 { background-color: #020e1c; }
+        .level-6 { background-color: #00070e; }
+        .level-deep { background-color: #000307; }
     </style>
 </head>
 <body>
@@ -79,128 +94,128 @@
         <div class="level level-1">
             <h2>Nível 1 - Superfície (Fatos/Mitos Populares)</h2>
             <ul>
-                <li>Área 51</li>
-                <li>Fake News</li>
-                <li>Chegada do homem a lua</li>
-                <li>Ollie</li>
-                <li>Controle da mídia</li>
-                <li>Androids</li>
-                <li>Illuminati</li>
-                <li>Teoria do Multiverso</li>
-                <li>Ovnis</li>
-                <li>Aeroporto de Denver</li>
-                <li>Atlântida</li>
-                <li>Polybius</li>
-                <li>Nibirú</li>
-                <li>Famosos que forjaram a própria morte</li>
-                <li>Efeito Mandela</li>
-                <li>McCartney foi substituído</li>
+                <li><a href="https://pt.wikipedia.org/wiki/%C3%81rea_51">Área 51</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Fake_news">Fake News</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Conspira%C3%A7%C3%A3o_da_chegada_do_homem_%C3%A0_Lua">Chegada do homem a lua</a></li>
+                <li><a href="#">Ollie</a></li>
+                <li><a href="#">Controle da mídia</a></li>
+                <li><a href="#">Androids</a></li>
+                <li><a href="#">Illuminati</a></li>
+                <li><a href="#">Teoria do Multiverso</a></li>
+                <li><a href="#">Ovnis</a></li>
+                <li><a href="#">Aeroporto de Denver</a></li>
+                <li><a href="#">Atlântida</a></li>
+                <li><a href="#">Polybius</a></li>
+                <li><a href="#">Nibirú</a></li>
+                <li><a href="#">Famosos que forjaram a pr&oacute;pria morte</a></li>
+                <li><a href="#">Efeito Mandela</a></li>
+                <li><a href="#">McCartney foi substitu&iacute;do</a></li>
             </ul>
         </div>
 
         <div class="level level-2">
             <h2>Nível 2</h2>
             <ul>
-                <li>Sonhos lúcidos</li>
-                <li>Reptilianos</li>
-                <li>Tulpa</li>
-                <li>Os cosmonautas desaparecidos</li>
-                <li>A 6ª extinção</li>
-                <li>Triângulo das Bermudas</li>
-                <li>Aliens criaram as pirâmides</li>
-                <li>O espaço é falso</li>
-                <li>Enigma 23</li>
-                <li>Sinal Wow!</li>
-                <li>A nova ordem mundial</li>
-                <li>Controle do clima (HAARP)</li>
-                <li>Seres paranormais</li>
-                <li>O código McFly</li>
-                <li>O assassino da I-70</li>
-                <li>Cicada 3301</li>
-                <li>Civilizações perdidas</li>
-                <li>Blue Beam</li>
+                <li><a href="#">Sonhos l&uacute;cidos</a></li>
+                <li><a href="#">Reptilianos</a></li>
+                <li><a href="#">Tulpa</a></li>
+                <li><a href="#">Os cosmonautas desaparecidos</a></li>
+                <li><a href="#">A 6ª extin&ccedil;&atilde;o</a></li>
+                <li><a href="#">Triângulo das Bermudas</a></li>
+                <li><a href="#">Aliens criaram as pir&acirc;mides</a></li>
+                <li><a href="#">O espa&ccedil;o é falso</a></li>
+                <li><a href="#">Enigma 23</a></li>
+                <li><a href="#">Sinal Wow!</a></li>
+                <li><a href="#">A nova ordem mundial</a></li>
+                <li><a href="#">Controle do clima (HAARP)</a></li>
+                <li><a href="#">Seres paranormais</a></li>
+                <li><a href="#">O c&oacute;digo McFly</a></li>
+                <li><a href="#">O assassino da I-70</a></li>
+                <li><a href="#">Cicada 3301</a></li>
+                <li><a href="#">Civiliza&ccedil;&otilde;es perdidas</a></li>
+                <li><a href="#">Blue Beam</a></li>
             </ul>
         </div>
 
         <div class="level level-3">
             <h2>Nível 3</h2>
             <ul>
-                <li>Titanic não afundou</li>
-                <li>teoria do gato de schrodinger</li>
-                <li>My Red Is Not Your Red</li>
-                <li>Arconte</li>
-                <li>Pleroma</li>
-                <li>Basilisco de Roko</li>
-                <li>Taured</li>
-                <li>Carta de 2070</li>
-                <li>Oumuamua</li>
-                <li>Os Estados Unidos é um experimento</li>
-                <li>O Bloop</li>
-                <li>Terra oca</li>
-                <li>Gigantes descritos na bíblia</li>
-                <li>Pantelmo</li>
-                <li>Red Rooms Dark Web</li>
-                <li>KKK foi fundado pelo governo</li>
-                <li>Vídeo-Games te monitoram</li>
-                <li>Enigma Publius</li>
-                <li>Gaydar</li>
+                <li><a href="#">Titanic n&atilde;o afundou</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Gato_de_Schr%C3%B6dinger">teoria do gato de schrodinger</a></li>
+                <li><a href="#">My Red Is Not Your Red</a></li>
+                <li><a href="#">Arconte</a></li>
+                <li><a href="#">Pleroma</a></li>
+                <li><a href="#">Basilisco de Roko</a></li>
+                <li><a href="#">Taured</a></li>
+                <li><a href="#">Carta de 2070</a></li>
+                <li><a href="#">Oumuamua</a></li>
+                <li><a href="#">Os Estados Unidos &eacute; um experimento</a></li>
+                <li><a href="#">O Bloop</a></li>
+                <li><a href="#">Terra oca</a></li>
+                <li><a href="#">Gigantes descritos na b&iacute;blia</a></li>
+                <li><a href="#">Pantelmo</a></li>
+                <li><a href="#">Red Rooms Dark Web</a></li>
+                <li><a href="#">KKK foi fundado pelo governo</a></li>
+                <li><a href="#">V&iacute;deo-Games te monitoram</a></li>
+                <li><a href="#">Enigma Publius</a></li>
+                <li><a href="#">Gaydar</a></li>
             </ul>
         </div>
 
         <div class="level level-4">
             <h2>Nível 4</h2>
             <ul>
-                <li>TOR pertence ao governo</li>
-                <li>Continentes extremos</li>
-                <li>Os fenícios descobriram a América</li>
-                <li>O mundo realmente acabou em 2012</li>
-                <li>Teoria da supressão da energia livre</li>
-                <li>Acosmismo</li>
-                <li>SCPs são reais</li>
-                <li>União Soviética nunca colapsou</li>
-                <li>Máquina de Anticítera</li>
-                <li>Coreia do Norte é a utopia</li>
-                <li>Hitler morreu no Brasil nos anos 80</li>
-                <li>Lâmpada de Dendera</li>
+                <li><a href="#">TOR pertence ao governo</a></li>
+                <li><a href="#">Continentes extremos</a></li>
+                <li><a href="#">Os fen&iacute;cios descobriram a Am&eacute;rica</a></li>
+                <li><a href="#">O mundo realmente acabou em 2012</a></li>
+                <li><a href="#">Teoria da supress&atilde;o da energia livre</a></li>
+                <li><a href="#">Acosmismo</a></li>
+                <li><a href="#">SCPs s&atilde;o reais</a></li>
+                <li><a href="#">Uni&atilde;o Sovi&eacute;tica nunca colapsou</a></li>
+                <li><a href="#">M&aacute;quina de Antic&iacute;tera</a></li>
+                <li><a href="#">Coreia do Norte &eacute; a utopia</a></li>
+                <li><a href="#">Hitler morreu no Brasil nos anos 80</a></li>
+                <li><a href="#">L&acirc;mpada de Dendera</a></li>
             </ul>
         </div>
 
         <div class="level level-5">
             <h2>Nível 5</h2>
             <ul>
-                <li>Hipótese do tempo-fantasma</li>
-                <li>Inédia</li>
-                <li>Ônfalo</li>
-                <li>Cérebro numa cuba</li>
-                <li>Pan-óptico</li>
-                <li>Anatta</li>
-                <li>Hipótese do macaco aquático</li>
-                <li>O dia não tem 24 horas</li>
-                <li>Cérebro de Boltzmann</li>
-                <li>Vida no sol</li>
-                <li>Os neandertais eram mais inteligentes do que os homo sapiens</li>
-                <li>Poliágua</li>
+                <li><a href="#">Hip&oacute;tese do tempo-fantasma</a></li>
+                <li><a href="#">In&eacute;dia</a></li>
+                <li><a href="#">Ônfalo</a></li>
+                <li><a href="#">C&eacute;rebro numa cuba</a></li>
+                <li><a href="#">Pan-&oacute;ptico</a></li>
+                <li><a href="#">Anatta</a></li>
+                <li><a href="#">Hip&oacute;tese do macaco aqu&aacute;tico</a></li>
+                <li><a href="#">O dia n&atilde;o tem 24 horas</a></li>
+                <li><a href="#">C&eacute;rebro de Boltzmann</a></li>
+                <li><a href="#">Vida no sol</a></li>
+                <li><a href="#">Os neandertais eram mais inteligentes do que os homo sapiens</a></li>
+                <li><a href="#">Poli&aacute;gua</a></li>
             </ul>
         </div>
 
         <div class="level level-6">
             <h2>Nível 6</h2>
             <ul>
-                <li>Despair code</li>
-                <li>Fonte Q</li>
-                <li>Teoria do universo oco</li>
-                <li>Semente da serpente</li>
-                <li>Bogandoff</li>
-                <li>Realidade subjetiva</li>
-                <li>Zoológicos humanos</li>
-                <li>Teoria da internet morta</li>
-                <li>Cameraheads</li>
-                <li>Povos do mar</li>
-                <li>Incidente do voleibol em 2006</li>
-                <li>Oxigênio é alucinógeno</li>
-                <li>CAIMEO</li>
-                <li>Misseis de agressão sexual</li>
-                <li>Finlândia não existe</li>
+                <li><a href="#">Despair code</a></li>
+                <li><a href="#">Fonte Q</a></li>
+                <li><a href="#">Teoria do universo oco</a></li>
+                <li><a href="#">Semente da serpente</a></li>
+                <li><a href="#">Bogandoff</a></li>
+                <li><a href="#">Realidade subjetiva</a></li>
+                <li><a href="#">Zool&oacute;gicos humanos</a></li>
+                <li><a href="#">Teoria da internet morta</a></li>
+                <li><a href="#">Cameraheads</a></li>
+                <li><a href="#">Povos do mar</a></li>
+                <li><a href="#">Incidente do voleibol em 2006</a></li>
+                <li><a href="#">Oxigênio é alucin&oacute;geno</a></li>
+                <li><a href="#">CAIMEO</a></li>
+                <li><a href="#">Misseis de agress&atilde;o sexual</a></li>
+                <li><a href="#">Finl&acirc;ndia n&atilde;o existe</a></li>
             </ul>
         </div>
 
@@ -208,36 +223,36 @@
             <h2>Níveis Profundos e Incompreensíveis</h2>
             <br>
             <ul>
-                <li>A cura do câncer foi silenciada</li>
-                <li>Império Romano ainda lidera o mundo</li>
+                <li><a href="#">A cura do c&acirc;ncer foi silenciada</a></li>
+                <li><a href="#">Imp&eacute;rio Romano ainda lidera o mundo</a></li>
             </ul>
             <br>
             <ul>
-                <li>A bíblia se passa no futuro</li>
-                <li>O céu é um holograma</li>
-                <li>Armas nucleares não existem</li>
+                <li><a href="#">A b&iacute;blia se passa no futuro</a></li>
+                <li><a href="#">O c&eacute;u é um holograma</a></li>
+                <li><a href="#">Armas nucleares n&atilde;o existem</a></li>
             </ul>
             <br>
             <ul>
-                <li>Nada fora da sua visão existe</li>
-                <li>Bug do Milênio realmente aconteceu</li>
+                <li><a href="#">Nada fora da sua vis&atilde;o existe</a></li>
+                <li><a href="#">Bug do Mil&ecirc;nio realmente aconteceu</a></li>
             </ul>
             <br>
             <ul>
-                <li>A vida é uma teoria não provada</li>
-                <li>Todas as religiões são iguais</li>
-                <li>Pangeia ainda existe</li>
-                <li>Acontece um 11 de Setembro todo ano</li>
-                <li>Nada é conhecido</li>
-                <li>Apollo 11 pousou na lua errada</li>
-                <li>A Terra é o único planeta verdadeiro</li>
-                <li>O último desejo de Deus</li>
-                <li>A teoria final</li>
-                <li>Os verdadeiros humanos já foram extintos a milhões de anos</li>
-                <li>A verdade não existe</li>
-                <li>Você não existe</li>
-                <li>Não existe conspiração</li>
-                <li>A teoria de tudo</li>
+                <li><a href="#">A vida &eacute; uma teoria n&atilde;o provada</a></li>
+                <li><a href="#">Todas as religi&otilde;es s&atilde;o iguais</a></li>
+                <li><a href="#">Pangeia ainda existe</a></li>
+                <li><a href="#">Acontece um 11 de Setembro todo ano</a></li>
+                <li><a href="#">Nada &eacute; conhecido</a></li>
+                <li><a href="#">Apollo 11 pousou na lua errada</a></li>
+                <li><a href="#">A Terra &eacute; o &uacute;nico planeta verdadeiro</a></li>
+                <li><a href="#">O &uacute;ltimo desejo de Deus</a></li>
+                <li><a href="#">A teoria final</a></li>
+                <li><a href="#">Os verdadeiros humanos j&aacute; foram extintos a milh&otilde;es de anos</a></li>
+                <li><a href="#">A verdade n&atilde;o existe</a></li>
+                <li><a href="#">Voc&ecirc; n&atilde;o existe</a></li>
+                <li><a href="#">N&atilde;o existe conspira&ccedil;&atilde;o</a></li>
+                <li><a href="#">A teoria de tudo</a></li>
             </ul>
         </div>
 
